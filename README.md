@@ -131,7 +131,7 @@ sudo pacman -S imagemagick jpegoptim pngquant libwebp bc
 1. **Always Test First**: Use `--keep` or `-o output/` to test on copies before replacing originals
 2. **WebP for Modern Web**: WebP typically produces files 25-35% smaller than optimized JPEG
 3. **Quality Sweet Spot**: Quality 80 is a good default; below 70 may show visible artifacts
-4. **Resizing Matters Most**: Resizing large images (e.g., 4000px → 1920px) provides the biggest file size reduction
+4. **Resizing Matters Most**: Resizing large images (e.g., 4000px -> 1920px) provides the biggest file size reduction
 5. **Use Dry Run**: Always preview with `-n` flag when processing many files
 6. **Batch Processing**: Combine recursive mode (`-r`) with dry run for safe batch operations
 
@@ -159,10 +159,12 @@ For maximum browser compatibility, use the HTML `<picture>` element:
 
 ## 🔍 Technical Details
 
-- **JPEG Optimization**: Uses jpegoptim with Huffman table optimization (20-60% savings)
-- **PNG Compression**: Uses pngquant with lossy quantization (50-80% savings)
-- **WebP Conversion**: Uses cwebp with VP8 lossy compression (25-35% better than JPEG)
+- **JPEG Optimization**: Uses jpegoptim with Huffman table optimization (typical savings: 20-60%)
+- **PNG Compression**: Uses pngquant with lossy quantization (typical savings: 50-80%)
+- **WebP Conversion**: Uses cwebp with VP8 lossy compression (typically 25-35% better than JPEG)
 - **Resizing**: Uses ImageMagick with Lanczos resampling (preserves aspect ratio)
+
+*Note: Actual compression results vary based on source image characteristics, original quality, and chosen settings.*
 
 For more technical information, see [references/REFERENCE.md](references/REFERENCE.md).
 
